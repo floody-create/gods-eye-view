@@ -991,6 +991,89 @@ const PUBLIC_SCENE_RECIPES = [
       },
     ],
   },
+  {
+    id: 'dsa-nigeria-orbital-watch',
+    title: msg('Defence Space Administration — Nigeria Strategic Overview'),
+    durationSec: 32,
+    style: 'surveillance',
+    ui: { hidePanels: false, hudMode: 'full', safeFrame: '16:9' },
+    layers: {
+      flights: true,
+      satellites: true,
+      earthquakes: false,
+      traffic: false,
+    },
+    post: {
+      bloom: 54,
+      sharpen: true,
+      detectionMode: 'SPARSE',
+      styleParams: {
+        surveillance: {
+          gain: 0.58,
+          bloom: 0.35,
+          scanlineStr: 0.8,
+          pixelation: 2.0,
+        },
+      },
+    },
+    cameraPath: [
+      {
+        // Global orbital altitude looking directly over West Africa & Gulf of Guinea
+        lat: 4.5,
+        lon: 5.5,
+        alt: 12000000,
+        heading: 0,
+        pitch: -85,
+        roll: 0,
+        duration: 6,
+        hold: 1,
+      },
+      {
+        // Maritime theater: Gulf of Guinea / Niger Delta maritime surveillance corridor
+        lat: 4.2,
+        lon: 6.0,
+        alt: 3500000,
+        heading: 15,
+        pitch: -65,
+        roll: 0,
+        duration: 6,
+        hold: 1,
+      },
+      {
+        // National airspace and strategic command overview approaching Abuja & Joint Operations
+        lat: 8.5,
+        lon: 7.5,
+        alt: 950000,
+        heading: 350,
+        pitch: -48,
+        roll: 0,
+        duration: 5,
+        hold: 1,
+      },
+      {
+        // Tactical command standoff over Abuja (Defence Space Administration HQ / Three Arms Zone)
+        lat: 9.04,
+        lon: 7.5,
+        alt: 180000,
+        heading: 340,
+        pitch: -38,
+        roll: 0,
+        duration: 5,
+        hold: 1,
+      },
+      {
+        // Pull out to regional sovereign satellite pass framing over the Nigerian landmass
+        lat: 9.08,
+        lon: 8.67,
+        alt: 2800000,
+        heading: 0,
+        pitch: -60,
+        roll: 0,
+        duration: 6,
+        hold: 0,
+      },
+    ],
+  },
 ];
 
 /** Build the recipe list without mutating stored user-authored projects. */
